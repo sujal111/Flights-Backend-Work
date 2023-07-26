@@ -1,5 +1,7 @@
 const express= require('express')
 const bodyParser=require('body-parser')
+const City= require('./config/serverconfig')
+const db=require('./models/index')
 require('dotenv').config()
 
 const {PORT}=require('./config/serverconfig')
@@ -11,6 +13,7 @@ const PORT=3000
     app.listen(PORT, ()=>{
         console.log(`Server started at ${PORT}`)
         console.log(process.env.PORT)
+        console.log('City')
     
     })
 }
